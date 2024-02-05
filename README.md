@@ -8,6 +8,22 @@ SAFFY 11th 구미 5반의 FrontEnd 지망생들이 F/E 스터디를 진행하는
 
 <br/>
 
+## 👥 Scholars
+> [김다운](https://github.com/kimdw524)
+> 
+> [박형준](https://github.com/brobac)
+> 
+> [조성우](https://github.com/ABizCho)
+> 
+> [최요하](https://github.com/yh-project)
+
+<br/>
+
+## 약속 👍
+❗ 스터디 참여자는 매 N주 간격으로, 다음 회차 과제형 스터디의 주제를 선정합니다. <br/> N주간 구현 후, 코드리뷰 및 기술교류 시간을 가집니다.
+
+<br/><br/>
+
 ## 스터디 진행방식
 `과제형 스터디`, `독서형 기술 스터디`, `취업대비 스터디`로 나누어 진행합니다.
 
@@ -23,52 +39,6 @@ F/E 관련 취업 대비 스터디를 진행할 수 있습니다.<br>
 - ex ) F/E 기술 면접 대비, 자소서 & 포트폴리오 대비 등
 
 <br/><br/>
-
-## 약속 👍
-❗ 스터디 참여자는 매 N주 간격으로, 다음 회차 과제형 스터디의 주제를 선정합니다. <br/> N주간 구현 후, 코드리뷰 및 기술교류 시간을 가집니다.
-
-<br/><br/>
-
-
-
-
-
-## 컨벤션
-
-<br/><br/>
-
-## 👥 Scholars
-> [김다운](https://github.com/kimdw524)
-> 
-> [박형준](https://github.com/brobac)
-> 
-> [조성우](https://github.com/ABizCho)
-> 
-> [최요하](https://github.com/yh-project)
-
-<br/><br/>
-
-## 과제 스터디 일정
-```
-완료 : 😊
-진행 : 😅
-포기 : 😱
-```
-<details><summary>📎 2월 일정</summary>
-
-|회차|김다운|박형준|조성우|최요하|기간|Ref|비고|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|**5회차** <br>`javascript`: <br>Carousel 구현|😅<br>[바로가기]()|😅<br>[바로가기]()|😅<br>[바로가기]()|😅<br>[바로가기]()|24.02.06 ~ 02.20| [부트스트랩 Carousel Docs](https://getbootstrap.kr/docs/5.0/components/carousel/)|-|
-
-
-</details>
-
-<br/><br/>
-
-## 리뷰 규칙
-스터디 시작 전, 다른 사람의 코드를 보고 신랄한 평가와 코멘트를 부탁드립니다.
-
-<br/>
 
 ## 과제 스터디 컨벤션
 해당 공동 레포를 사용하며, 자신의 이름으로 폴더를 소유 및 관리합니다.
@@ -86,5 +56,25 @@ F/E 관련 취업 대비 스터디를 진행할 수 있습니다.<br>
 `{ 본인이름 } : { N회차 } : { 스택 } : { 과제 }` <br/>
 
 ex. `seongwoo : 1회차 : Vanilla JS : Carousel 구현`
+
+
+<br/><br/>
+
+## 과제 스터디 일정
+```
+완료 : 😊
+진행 : 😅
+포기 : 😱
+```
+<details><summary>📎 2월 일정</summary>
+
+|회차|김다운|박형준|조성우|최요하|기간|Ref|비고|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|**1회차** <br>`javascript`: <br>Carousel 구현|😅<br>[바로가기]()|😅<br>[바로가기]()|😅<br>[바로가기]()|😅<br>[바로가기]()|24.02.06 ~ 02.20| [부트스트랩 Carousel Docs](https://getbootstrap.kr/docs/5.0/components/carousel/)|-|
+
+
+</details>
+
+
 
 
