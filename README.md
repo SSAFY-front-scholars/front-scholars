@@ -44,18 +44,35 @@ F/E 관련 취업 대비 스터디를 진행할 수 있습니다.<br>
 해당 공동 레포를 사용하며, 자신의 이름으로 폴더를 소유 및 관리합니다.
 <br/>
 
+### File Tree
+```
+ThisRepo
+    ㄴ/dawoon
+        ㄴ/js
+            ㄴ/carousel_1st
+                ㄴ(이하는 자유)
+            ㄴ/Modal_2nd
+                ㄴ(이하는 자유)
+            ...
+        ㄴreact
+            ㄴ/과제명_N회차
+                ㄴ(이하는 자유)
+            ...
+    ㄴ/hyeongjun
+    ㄴ/seongwoo
+    ㄴ/yoha
+```
+
+### branch & merge 규칙
 1. `main 브랜치`로부터 자신의 이름으로 branch를 만들어 과제를 수행합니다.
 
 2. 과제 완성 후 `main`으로 PR을 걸고, 온/오프라인으로 모든 스터디원으로부터 리뷰를 받고 `Allow merge commits`를 얻습니다.
 3. `PR`을 통해 main 브랜치로 merge를 수행합니다.
+    - PR 제목 컨벤션
+      - `{ 본인이름 } : { N회차 } : { 스택 } : { 과제 }` <br/>
+        - ex ) seongwoo : 1회차 : Vanilla JS : Carousel 구현
 4. 각자의 branch에 갱신된 main을 반영한 후, 다음 회차 과제를 준비합니다.
 
-<br/>
-
-#### Pull Request 생성  
-`{ 본인이름 } : { N회차 } : { 스택 } : { 과제 }` <br/>
-
-ex. `seongwoo : 1회차 : Vanilla JS : Carousel 구현`
 
 
 <br/><br/>
