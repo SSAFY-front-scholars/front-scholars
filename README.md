@@ -87,7 +87,7 @@ ThisRepo
 
 |회차|김다운|박형준|조성우|최요하|기간|Ref|비고|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|**1회차** <br>`javascript`: <br>Carousel 구현|😅<br>[바로가기]()|😅<br>[바로가기]()|😅<br>[바로가기]()|😅<br>[바로가기]()|24.02.06 ~ 02.20| [부트스트랩 Carousel Docs](https://getbootstrap.kr/docs/5.0/components/carousel/)|-|
+|**1회차** <br>`javascript`: <br>Carousel 구현|😅<br>[바로가기]()|😅<br>[바로가기]()|😅<br>[바로가기]()|😅<br>[바로가기]()|24.02.06 ~ 02.20| [부트스트랩 Carousel Docs](https://github.com/SSAFY-front-scholars/front-scholars/issues/1#issuecomment-1928567024)|-|
 
 
 </details>
