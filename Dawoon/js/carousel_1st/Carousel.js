@@ -43,6 +43,7 @@ document.querySelectorAll('.carousel').forEach(($e) => {
       const $indicator = document.createElement('button');
       $indicator.classList.add('carousel-indicator');
       $indicator.addEventListener('click', () => {
+        if (index === slide) return;
         setSlide(index);
       });
       $container.append($indicator);
