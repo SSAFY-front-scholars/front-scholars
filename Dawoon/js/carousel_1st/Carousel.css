@@ -84,12 +84,7 @@ body {
   color: #ffffff;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 1000ms ease;
   mix-blend-mode: difference;
-}
-
-.carousel-skip:hover {
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .carousel-skip.prev {
