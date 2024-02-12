@@ -3,8 +3,8 @@ document.querySelectorAll('.carousel').forEach(($e) => {
   let slide = 0;
 
   const setPagination = (current, last) => {
-    const $current = $e.querySelector('.carousel-timer-container span.current');
-    const $last = $e.querySelector('.carousel-timer-container span.last');
+    const $current = $e.querySelector('.carousel-pagination span.current');
+    const $last = $e.querySelector('.carousel-pagination span.last');
     $current.innerHTML = `0${current}`.slice(-2);
     $last.innerHTML = `0${last}`.slice(-2);
   };
