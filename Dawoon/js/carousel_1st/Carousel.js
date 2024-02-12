@@ -2,6 +2,13 @@ document.querySelectorAll('.carousel').forEach(($e) => {
   let preventTransition = false;
   let slide = 0;
 
+  const setPagination = (current, last) => {
+    const $current = $e.querySelector('.carousel-timer-container span.current');
+    const $last = $e.querySelector('.carousel-timer-container span.last');
+    $current.innerHTML = `0${current}`.slice(-2);
+    $last.innerHTML = `0${last}`.slice(-2);
+  };
+
   const setSlide = (value) => {
     if (preventTransition) return;
     const toRight = slide < value;
@@ -35,9 +42,8 @@ document.querySelectorAll('.carousel').forEach(($e) => {
     $nextItem?.classList.add('selected');
     $nextItem?.classList.add(toRight ? 'right' : 'left');
 
-    $e.querySelector('.carousel-timer-container span.current').innerHTML = `0${slide + 1}`.slice(
-      -2,
-    );
+    setPagination(slide + 1, length);
+
     $progress.classList.remove('active');
   };
 
@@ -56,8 +62,8 @@ document.querySelectorAll('.carousel').forEach(($e) => {
       $container.append($indicator);
     });
     $e.querySelector('.carousel-indicator:nth-child(1)')?.classList.add('selected');
-    $e.querySelector('.carousel-timer-container span.current').innerHTML = '01';
-    $e.querySelector('.carousel-timer-container span.last').innerHTML = `0${length}`.slice(-2);
+
+    setPagination(1, length);
 
     const $progress = $e.querySelector('.carousel-timer-progressbar-child');
     $progress.classList.add('active');
