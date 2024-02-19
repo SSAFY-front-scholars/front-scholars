@@ -5,6 +5,7 @@
  * nextBtn : 다음 버튼
  * controllerBtn : 자동 슬라이딩 제어 버튼
  * currentSlide : 현재 슬라이드 index
+ * progressBar : 진행바
  */
 const slides = document.querySelector(".carousel-slide");
 const indicators = document.querySelectorAll(".indicator");
@@ -12,6 +13,7 @@ const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 const controllerBtn = document.querySelector(".controller");
 const currentSlide = document.querySelector(".current-slide");
+const progressBar = document.querySelector(".progress-bar");
 
 /**
  * curIdx : 현재 슬라이드 index
@@ -32,7 +34,7 @@ const startInterval = () => {
   intervalId = setInterval(() => {
     curIdx = (curIdx + 1) % slides.children.length;
     updateCarousel();
-  }, 1500);
+  }, 3000);
 };
 
 const restartInterval = () => {
@@ -51,6 +53,15 @@ const updateCarousel = () => {
     else indicator.classList.remove("active");
   });
   currentSlide.textContent = `0${curIdx + 1}`;
+
+  progressBar.style.transitionDuration = "0s";
+  progressBar.style.width = "0";
+  if (state === "resume") {
+    setTimeout(() => {
+      progressBar.style.transitionDuration = "3s";
+      progressBar.style.width = "100%";
+    }, 10);
+  }
 };
 
 // 이미지 자동슬라이드 시작
@@ -63,14 +74,14 @@ indicators[curIdx].classList.add("active");
 prevBtn.addEventListener("click", () => {
   curIdx = (curIdx - 1 + slides.children.length) % slides.children.length;
   updateCarousel();
-  restartInterval();
+  if (state === "resume") restartInterval();
 });
 
 // 다음 버튼
 nextBtn.addEventListener("click", () => {
   curIdx = (curIdx + 1) % slides.children.length;
   updateCarousel();
-  restartInterval();
+  if (state === "resume") restartInterval();
 });
 
 // 인디케이터 클릭하면 해당 이미지로
@@ -82,16 +93,17 @@ indicators.forEach((indicator, idx) => {
   });
 });
 
-// 자동 슬라이딩 멈춤
+// 자동 슬라이딩 멈춤/재개
 controllerBtn.addEventListener("click", () => {
-  console.log(state);
   if (state === "resume") {
+    // 재생 상태였다면
     state = "pause";
-    pauseInterval();
+    pauseInterval(); // 멈춤
     controllerBtn.innerHTML = "&#10062;";
   } else {
+    // 멈춤 상태였다면
     state = "resume";
-    startInterval();
+    startInterval(); // 재개
     controllerBtn.innerHTML = "&#9989;";
   }
 });
