@@ -10,6 +10,8 @@
 - [x] 무한 슬라이드
   - [x] 마지막 슬라이드 <-> 첫 슬라이드
 
+---
+
 ### 심화 구현 사항
 
 - [x] 자동 슬라이드 기능 추가
@@ -17,3 +19,16 @@
   - [x] 일시정지, 재개 버튼 추가
   - [x] 시간에 따른 진행 바 추가
 - [ ] fade out 효과를 넣어서 현재 슬라이드의 전/후 슬라이드 배경에 살짝 보여주기
+
+---
+
+### 구동 화면
+
+_좌 / 우 인디케이터 (무한 슬라이딩)_
+[좌 / 우 인디케이터 (무한 슬라이딩)](./assets/left_right_indicator.gif)
+_하단 인디케이터 (즉시이동)_
+[하단 인디케이터 (즉시이동)](./assets/bottom_indicators.gif)
+_슬라이딩에 따른 index 표기 & progress bar_
+[슬라이딩에 따른 index 표기 & progress bar](./assets/index_progressbar.gif)
+_자동 슬라이딩 멈춤/재개_
+[자동 슬라이딩 멈춤/재개](./assets/controller.gif)
