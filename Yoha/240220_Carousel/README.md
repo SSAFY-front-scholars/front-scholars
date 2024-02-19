@@ -24,11 +24,18 @@
 
 ### 구동 화면
 
-_좌 / 우 인디케이터 (무한 슬라이딩)_
-[좌 / 우 인디케이터 (무한 슬라이딩)](./assets/left_right_indicator.gif)
-_하단 인디케이터 (즉시이동)_
-[하단 인디케이터 (즉시이동)](./assets/bottom_indicators.gif)
-_슬라이딩에 따른 index 표기 & progress bar_
-[슬라이딩에 따른 index 표기 & progress bar](./assets/index_progressbar.gif)
-_자동 슬라이딩 멈춤/재개_
-[자동 슬라이딩 멈춤/재개](./assets/controller.gif)
+**좌 / 우 인디케이터 (무한 슬라이딩)**
+![left_right_indicator](https://github.com/SSAFY-front-scholars/front-scholars/assets/86611398/860fbbce-ca02-457d-b922-a9fe8e9b7919)
+<br>
+
+**하단 인디케이터 (즉시이동)**
+![bottom_indicators](https://github.com/SSAFY-front-scholars/front-scholars/assets/86611398/fb596013-5def-42af-b0be-749f7f065a30)
+<br>
+
+**슬라이딩에 따른 index 표기 & progress bar**
+![index_progressbar](https://github.com/SSAFY-front-scholars/front-scholars/assets/86611398/07cddd37-1ce8-490a-8fc5-69bedf5f8937)
+<br>
+
+**자동 슬라이딩 멈춤/재개**
+![controller](https://github.com/SSAFY-front-scholars/front-scholars/assets/86611398/842386cd-511b-40e1-b0f1-fa9fd972fb30)
+<br>
