@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
     let timer = true;
     let slide = 0;
 
+    // Carousel 우측 하단에 현재 페이지와 마지막 페이지를 표시하는 메소드
     const setPagination = (current, last) => {
       const $current = $e.querySelector('.carousel-pagination span.current');
       const $last = $e.querySelector('.carousel-pagination span.last');
@@ -11,6 +12,7 @@ window.addEventListener('load', () => {
       $last.innerHTML = `0${last}`.slice(-2);
     };
 
+    // 슬라이드 이동
     const setSlide = (value) => {
       if (preventTransition) return;
       const toRight = slide < value;
@@ -54,6 +56,7 @@ window.addEventListener('load', () => {
       const { length } = $e.querySelectorAll('.carousel-inner .carousel-item');
       $e.querySelector('.carousel-inner .carousel-item:nth-child(1)')?.classList.add('selected');
 
+      // Carousel Indicator 추가
       $e.querySelectorAll('.carousel-inner .carousel-item').forEach((element, index) => {
         const $indicator = document.createElement('button');
         $indicator.classList.add('carousel-indicator');
@@ -67,12 +70,14 @@ window.addEventListener('load', () => {
 
       setPagination(1, length);
 
+      // 자동 슬라이드 ProgressBar
       const $progress = $e.querySelector('.carousel-timer-progressbar-child');
       $progress.classList.add('active');
       $progress?.addEventListener('transitionend', () => {
         setSlide(slide + 1);
       });
 
+      // 자동 슬라이드 ON/OFF
       const $timerToggle = $e.querySelector('.carousel-timer-icon');
       $timerToggle?.addEventListener('click', () => {
         $timerToggle.classList.toggle('play');
@@ -93,6 +98,7 @@ window.addEventListener('load', () => {
     $e.querySelector('.next')?.addEventListener('click', () => {
       setSlide(slide + 1);
     });
+
     init();
   });
 });
