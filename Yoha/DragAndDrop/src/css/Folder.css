@@ -1,0 +1,35 @@
+/* 폴더 컨테이너 영역 style */
+.folder_container {
+  width: 600px;
+  padding: 50px 50px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+/* 폴더 top(제목 + 수직/수평 변경 버튼) 영역 style */
+.folder_top {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 5px 10px 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* 폴더 제목 style */
+.folder_title {
+  font-weight: bold;
+  font-size: large;
+  color: black;
+}
+
+/* item 들이 보여질 곳 */
+.folder_body {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
