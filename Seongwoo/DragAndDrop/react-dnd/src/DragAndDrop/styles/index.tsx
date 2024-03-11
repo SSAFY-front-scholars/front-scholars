@@ -7,8 +7,8 @@ const mainCss = css`
 `;
 
 const containerCss = css`
-  background-color: gray;
-  border-radius: 1rem;
+  background-color: #313131;
+  border-radius: 0.5rem;
   width: 120px;
   height: auto;
   padding: 10px;
@@ -17,15 +17,25 @@ const containerCss = css`
   gap: 10px;
 `;
 
+const commonItemStyle = css({
+  color: 'white',
+  width: '100%',
+  height: '50px',
+  textAlign: 'center',
+  cursor: 'grab',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+});
+
 const itemCss = {
-  blue: css({
-    color: 'white',
-    borderRadius: '1rem',
-    backgroundColor: 'blue',
-    width: '50px',
-    height: '50px',
-    textAlign: 'center',
-    cursor: 'grab',
+  default: css(commonItemStyle.styles, {
+    backgroundColor: 'gray',
+  }),
+  dragOver: css(commonItemStyle.styles, {
+    borderColor: 'black',
+    backgroundColor: 'lightgray',
+    opacity: '0.7',
   }),
 };
 
