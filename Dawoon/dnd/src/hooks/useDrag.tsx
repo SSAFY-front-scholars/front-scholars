@@ -1,4 +1,4 @@
-import React, { MutableRefObject, ReactElement, useEffect, useRef, useState } from 'react'
+import React, { ReactElement, useEffect, useRef, useState } from 'react'
 
 const useDrag = () => {
   const [item, setItem] = useState<ReactElement[]>([])
@@ -17,6 +17,7 @@ const useDrag = () => {
   const insertItem = (source: number, index: number) => {
     if (source == -1 || index == -1) return
     if (source == index) return
+    if (source + 1 == index) return
     if (source > index) {
       ref.current = [
         ...ref.current.slice(0, index),
