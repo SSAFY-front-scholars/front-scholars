@@ -9,7 +9,7 @@ function App() {
     () =>
       ['1 🐟', '2 🐠', '3 🐡', '4 🦐', '5 🦑', '6 🐙'].forEach((i, index) => {
         addItem((ref) => (
-          <Item key={i} ref={(el) => (ref.current[index] = el)}>
+          <Item key={i} ref={ref}>
             {i}
           </Item>
         ))

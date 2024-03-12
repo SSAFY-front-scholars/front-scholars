@@ -5,10 +5,13 @@ const useDrag = () => {
   const dragRef = useRef<EventTarget | null>()
   const ref = useRef<HTMLDivElement[]>([])
 
-  const addItem = (
-    callback: (ref: MutableRefObject<HTMLDivElement[] | null[]>) => ReactElement,
-  ) => {
-    setItem((item) => [...item, callback(ref)])
+  const addItem = (callback: (func: (el: HTMLDivElement) => void) => ReactElement) => {
+    setItem((item) => [
+      ...item,
+      callback((el: HTMLDivElement) => {
+        ref.current[ref.current.length] = el
+      }),
+    ])
   }
 
   const insertItem = (source: number, index: number) => {
