@@ -17,14 +17,12 @@ const Item = forwardRef<HTMLDivElement, ItemProps>((props: ItemProps, ref) => {
 Item.displayName = 'Item'
 
 const container = css`
+  margin: 0.5rem;
   padding: 0.75rem;
-  background-color: rgb(80, 80, 80);
+  background-color: rgb(52, 115, 173);
   color: #fff;
   font-size: 2rem;
   user-select: none;
-  :nth-of-type(even) {
-    background-color: rgb(52, 115, 173);
-  }
 `
 
 export default Item

@@ -37,23 +37,37 @@ const useDrag = () => {
     }
   }
 
+  const setDragAnimation = (el: HTMLDivElement, active: boolean) => {
+    if (active) {
+      el.style.opacity = '0.75'
+      el.style.boxShadow = '0 0 8px rgb(200, 200, 200)'
+      el.style.transform = `scale(${1 + 12 / el.getBoundingClientRect().width})`
+    } else {
+      el.style.opacity = ''
+      el.style.boxShadow = ''
+      el.style.transform = ''
+    }
+  }
+
   useEffect(() => {
+    const ghotsImage = new Image()
+    ghotsImage.src = 'data:image/png;base64,'
+
     const handleDragStart = (e: DragEvent) => {
       dragRef.current = e.target
+      e.dataTransfer?.setDragImage(ghotsImage, 0, 0)
+      if (dragRef.current instanceof HTMLDivElement) {
+        setDragAnimation(dragRef.current, true)
+      }
     }
 
     const handleDragOver = (e: DragEvent) => {
       e.preventDefault()
-    }
-
-    const handleDragEnd = (e: DragEvent) => {
-      dragRef.current = null
-    }
-
-    const handleDrop = (e: DragEvent) => {
-      e.preventDefault()
       const source = ref.current.findIndex((el) => el == dragRef.current)
       const target = ref.current.findIndex((el) => el == e.target)
+
+      if (source === target) return
+
       if (e.target instanceof HTMLDivElement) {
         const rect = e.target.getBoundingClientRect()
         if ((e.clientY - rect.top) / rect.height >= 0.5) {
@@ -64,18 +78,24 @@ const useDrag = () => {
       }
     }
 
+    const handleDragEnd = (e: DragEvent) => {
+      if (dragRef.current instanceof HTMLDivElement) {
+        setDragAnimation(dragRef.current, false)
+      }
+      dragRef.current = null
+    }
+
     ref.current.forEach((el) => {
       el.addEventListener('dragstart', handleDragStart)
       el.addEventListener('dragover', handleDragOver)
-      el.addEventListener('drop', handleDrop)
       el.addEventListener('dragend', handleDragEnd)
+      el.style.transition = 'all 50ms ease'
     })
 
     return () => {
       ref.current.forEach((el) => {
         el.removeEventListener('dragstart', handleDragStart)
         el.removeEventListener('dragover', handleDragOver)
-        el.removeEventListener('drop', handleDrop)
         el.removeEventListener('dragend', handleDragEnd)
       })
     }
