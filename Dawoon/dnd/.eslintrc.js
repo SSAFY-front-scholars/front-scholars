@@ -27,5 +27,12 @@ module.exports = {
   plugins: ['@typescript-eslint', 'react'],
   rules: {
     'react/no-unknown-property': ['error', { ignore: ['css'] }],
+    'no-param-reassign': 0,
+    'no-shadow': 0,
+    'no-extraneous-dependencies': 0,
+    'import/no-extraneous-dependencies': 0,
+    'arrow-body-style': 0,
+    'no-use-before-define': 0,
+    'import/no-unresolved': 0,
   },
-}
+};

@@ -15,9 +15,9 @@ const useDrag = () => {
   };
 
   const insertItem = (source: number, index: number) => {
-    if (source == -1 || index == -1) return;
-    if (source == index) return;
-    if (source + 1 == index) return;
+    if (source === -1 || index === -1) return;
+    if (source === index) return;
+    if (source + 1 === index) return;
     if (source > index) {
       ref.current = [
         ...ref.current.slice(0, index),
@@ -67,8 +67,8 @@ const useDrag = () => {
 
     const handleDragOver = (e: DragEvent) => {
       e.preventDefault();
-      const source = ref.current.findIndex((el) => el == dragRef.current);
-      const target = ref.current.findIndex((el) => el == e.target);
+      const source = ref.current.findIndex((el) => el === dragRef.current);
+      const target = ref.current.findIndex((el) => el === e.target);
 
       if (source === target) return;
 

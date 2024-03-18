@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+
 import Container from './components/Container';
 import Item from './components/Item';
 import useDrag from './hooks/useDrag';
@@ -6,7 +7,8 @@ import Drop from './components/Drop';
 
 function App() {
   const { addItem, item } = useDrag();
-  /*useEffect(
+  /*
+  useEffect(
     () =>
       ['1 🐟', '2 🐠', '3 🐡', '4 🦐', '5 🦑', '6 🐙'].forEach((i, index) => {
         addItem((ref) => (
@@ -16,7 +18,8 @@ function App() {
         ));
       }),
     [],
-  );*/
+  );
+  */
 
   return (
     <div className="App">
