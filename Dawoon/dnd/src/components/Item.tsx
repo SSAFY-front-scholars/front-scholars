@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react'
-import React, { ReactNode, forwardRef } from 'react'
+import { css } from '@emotion/react';
+import React, { ReactNode, forwardRef } from 'react';
 
 interface ItemProps {
-  children: ReactNode
+  children: ReactNode;
 }
 
 const Item = forwardRef<HTMLDivElement, ItemProps>((props: ItemProps, ref) => {
@@ -11,18 +11,19 @@ const Item = forwardRef<HTMLDivElement, ItemProps>((props: ItemProps, ref) => {
     <div ref={ref} css={container} draggable={true}>
       {props.children}
     </div>
-  )
-})
+  );
+});
 
-Item.displayName = 'Item'
+Item.displayName = 'Item';
 
 const container = css`
+  display: inline-block;
   margin: 0.5rem;
   padding: 0.75rem;
   background-color: rgb(52, 115, 173);
   color: #fff;
   font-size: 2rem;
   user-select: none;
-`
+`;
 
-export default Item
+export default Item;
