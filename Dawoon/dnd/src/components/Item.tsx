@@ -8,7 +8,7 @@ interface ItemProps {
 
 const Item = forwardRef<HTMLDivElement, ItemProps>((props: ItemProps, ref) => {
   return (
-    <div ref={ref} css={container} draggable={true}>
+    <div ref={ref} css={container}>
       {props.children}
     </div>
   );
