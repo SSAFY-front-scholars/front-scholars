@@ -1,11 +1,16 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
+import React, { RefObject, useEffect, useRef, useState } from "react";
 import "./App.css";
 import Folder from "./components/Folder";
 import Item from "./components/Item";
+import useDnd from "./utils/useDnd";
 
 function App() {
-  const [itemList, setItemList] = useState<string[]>([
+  //------------------------------------------------------------------------------- ver.2
+  const refs = useRef<HTMLDivElement[]>([]);
+  return <div className="w- bg-black h-100">hello</div>;
+
+  //------------------------------------------------------------------------------- ver.1
+  /*const [itemList, setItemList] = useState<string[]>([
     // 리스트 item
     "1번 Item",
     "2번 Item",
@@ -61,7 +66,7 @@ function App() {
         })}
       </Folder>
     </div>
-  );
+  );*/
 }
 
 export default App;
